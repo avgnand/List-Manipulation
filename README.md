@@ -9,3 +9,6 @@ I wanted to try to construct them from scratch.
 
 It is especially interesting to call the functions from within one another and 
 to build up the functionality as a whole.
+
+Also, I will continue adding new functions as I get ideas for new ones. 
+There may be comments lingering that I use for note-taking and testing.
