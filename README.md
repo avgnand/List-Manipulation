@@ -1,4 +1,4 @@
-# List-Manipulation
+# List Manipulation
 Creating lists and manipulating their lengths and values.
 
 I have written a few functions which interact with lists in various ways, 
