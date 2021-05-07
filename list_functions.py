@@ -7,6 +7,13 @@ def sum_list(list_obj):
         sum += num
     return sum
 
+def find_list_max(list_obj):
+    max = 0
+    for item in list_obj:
+        if item > max:
+            max = item
+    return max
+
 def show_rel_wt(list_obj):
     """Return a list with relative weights each member comprises of the given list."""
     total = sum_list(list_obj)
@@ -71,6 +78,24 @@ def create_unique_lists(amount):
         i += 1
     
     return box
+
+def check_list_weight(list_obj, max_wt):
+    list_wt = sum_list(list_obj)
+    if list_wt > max_wt:
+        list_max = find_list_max(list_obj)
+        print(list_max)
+        box = []
+        box.append(list_max)
+        list_obj.remove(list_max)
+        check_list_weight(list_obj, max_wt)
+        return list_obj
+    
+    return list_obj
+
+dummy = create_wild_lists(1, 5)
+print(dummy)
+dummy_checked = check_list_weight(dummy, 50)
+print(dummy_checked)
 
 # New Function:
 # if sum of a list is greater than given max, 
